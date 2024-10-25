@@ -64,13 +64,14 @@ progression = int(pieces_mensuelles) / objectif_mensuel if objectif_mensuel > 0 
 st.progress(max( 0.00 ,min( 1.00, progression)))
 
 # Formulaire pour modifier l'objectif mensuel
-with st.form("modifier_objectif"):
-    nouvel_objectif = st.number_input("Nouvel objectif mensuel", min_value=1, step=1, value=objectif_mensuel)
-    submit = st.form_submit_button("Modifier l'objectif")
+with st.expander("Modifier l'objectif"):
+    with st.form("modifier_objectif"):
+        nouvel_objectif = st.number_input("Nouvel objectif mensuel", min_value=1, step=1, value=objectif_mensuel)
+        submit = st.form_submit_button("Modifier l'objectif")
 
-    if submit:
-        # Mise à jour de l'objectif dans le fichier JSON
-        data['objectif_mensuel'] = nouvel_objectif
-        save_data(data_file, data)
-        st.success(f"Objectif mensuel mis à jour à {nouvel_objectif} pièces")
-        st.rerun()
+        if submit:
+            # Mise à jour de l'objectif dans le fichier JSON
+            data['objectif_mensuel'] = nouvel_objectif
+            save_data(data_file, data)
+            st.success(f"Objectif mensuel mis à jour à {nouvel_objectif} pièces")
+            st.rerun()

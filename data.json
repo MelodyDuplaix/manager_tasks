@@ -1,7 +1,7 @@
 {
     "objectif": 10,
-    "daily": 0,
-    "total": 9998,
+    "daily": 8,
+    "total": 8,
     "taches": {
         "Faire une liste de nom 5 noms": [
             1,
@@ -36,5 +36,6 @@
         "jours de repos": 20,
         "Manger du chocolat": 1
     },
-    "objectif_mensuel": 200
+    "objectif_mensuel": 300,
+    "objectif_hebdomadaire": 100
 }

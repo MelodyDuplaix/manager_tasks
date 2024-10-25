@@ -90,7 +90,7 @@ with col_general:
         st.metric(label="Daily", value=f"{st.session_state.daily} / {st.session_state.objectif}")
 
     with col_progress:
-        progress_value = min(100, max(0, (100 * st.session_state.daily) / st.session_state.objectif))
+        progress_value = int(min(100, max(0, (100 * st.session_state.daily) / st.session_state.objectif)))
         my_bar = st.progress(progress_value)
 
     def reset_daily():
