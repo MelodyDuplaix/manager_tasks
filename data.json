@@ -1,0 +1,40 @@
+{
+    "objectif": 10,
+    "daily": 0,
+    "total": 9998,
+    "taches": {
+        "Faire une liste de nom 5 noms": [
+            1,
+            "Administration"
+        ],
+        "Appeler": [
+            2,
+            "Communication"
+        ],
+        "Caler une date de rdv": [
+            2,
+            "Planification"
+        ],
+        "Créer une fiche": [
+            1,
+            "Administration"
+        ],
+        "Appeler les recommandations de ses clients": [
+            2,
+            "Communication"
+        ],
+        "Amener une dégustation": [
+            2,
+            "Vente"
+        ],
+        "Vente faite": [
+            5,
+            "Vente"
+        ]
+    },
+    "recompenses": {
+        "jours de repos": 20,
+        "Manger du chocolat": 1
+    },
+    "objectif_mensuel": 200
+}

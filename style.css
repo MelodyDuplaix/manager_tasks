@@ -1,0 +1,15 @@
+.total_metric {
+        width: 20vw;
+        position: absolute;
+        top: -15vh;
+        left: 9vw;
+}
+.value_total {
+    font-size: calc(1.35rem + 1.2vw);
+}
+.label_total {
+    margin-bottom: 0;
+}
+.stExpander {
+    max-width: 599px;
+  }
