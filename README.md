@@ -42,7 +42,7 @@ L'objectif principal de ce manager est de fournir un système de suivi et de mot
 	- [x] configs de récompenses dispo ✅ 2024-10-24
 	- [x] configs d'objectifs ✅ 2024-10-24
 - [x] ajouter une barre de progression mensuelle dans une page mensuelle ✅ 2024-10-24
-- [x] ajouter une barre de progression hebdomadaire dans une page hebdo
+- [x] ajouter une barre de progression hebdomadaire dans une page hebdo ✅ 2024-10-25
 - [ ] ajouter la possibilité d'avoir plusieurs sous managers 
 - [ ] ajouter des tâches ponctuelle 
 - [ ] ajouter un moyen de changer les configs des managers dispos 
