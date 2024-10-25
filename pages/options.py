@@ -65,10 +65,10 @@ def modifier_objectif(nouvel_objectif):
 
 st.set_page_config(page_title="Modification des tâches et récompenses", page_icon="⚙️", layout="centered")
 
-st.title("Modifier, Ajouter et Supprimer des Tâches, Récompenses et Objectif")
+st.title("Modifier, Ajouter et Supprimer des Tâches, Récompenses et Objectif quotidien")
 
 # Section pour l'objectif
-st.header("Objectif")
+st.header("Objectif quotidien")
 
 # Afficher et modifier l'objectif
 objectif = data.get('objectif', 0)  # Récupérer l'objectif actuel ou 0 s'il n'existe pas
