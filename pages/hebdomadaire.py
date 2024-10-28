@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 # Fichiers de données
 data_file = 'data.json'
-historique_file = './historique.csv'
+historique_file = 'historique.csv'
 
 # Fonction pour charger les données depuis le fichier JSON
 def load_data(filename):

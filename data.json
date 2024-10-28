@@ -2,8 +2,8 @@
     "managers": {
         "Beautysané": {
             "objectif": 10,
-            "daily": 15,
-            "total": 15,
+            "daily": 0,
+            "total": 0,
             "objectif_mensuel": 300,
             "objectif_hebdomadaire": 100,
             "taches": {
@@ -41,31 +41,6 @@
                 "Manger du chocolat": 1
             },
             "taches_ponctuelles": {}
-        },
-        "Test": {
-            "objectif": 15,
-            "daily": 8,
-            "total": 8,
-            "objectif_mensuel": 200,
-            "objectif_hebdomadaire": 70,
-            "taches": {
-                "Envoyer un email": [
-                    1,
-                    "Communication"
-                ],
-                "Organiser une réunion": [
-                    3,
-                    "Planification"
-                ],
-                "Rédiger un rapport": [
-                    2,
-                    "Administration"
-                ]
-            },
-            "recompenses": {
-                "Pause café": 5,
-                "Regarder une vidéo": 2
-            }
         }
     }
 }

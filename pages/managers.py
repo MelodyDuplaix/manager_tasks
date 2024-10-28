@@ -14,7 +14,18 @@ def save_data(filename, data):
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
+# Fonction pour mettre à jour l'historique avec le nouveau nom de sous-manager
+def update_historique(old_name, new_name, log_file):
+    with open(log_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    
+    with open(log_file, 'w', encoding='utf-8') as f:
+        for line in lines:
+            # Remplacer l'ancien nom par le nouveau dans chaque ligne
+            f.write(line.replace(old_name, new_name))
+
 data_file = 'data.json'
+log_file = 'historique.csv'
 data = load_data(data_file)
 
 # Fonction pour ajouter un nouveau sous-manager
@@ -28,6 +39,7 @@ def modifier_nom_sous_manager(ancien_nom, nouveau_nom):
     if ancien_nom in data['managers'] and nouveau_nom not in data['managers']:
         data['managers'][nouveau_nom] = data['managers'].pop(ancien_nom)
         save_data(data_file, data)
+        update_historique(ancien_nom, nouveau_nom, log_file)  # Mettre à jour l'historique
 
 # Fonction pour supprimer un sous-manager
 def supprimer_sous_manager(nom):
