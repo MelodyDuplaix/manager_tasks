@@ -15,9 +15,13 @@ L'objectif principal de ce manager est de fournir un système de suivi et de mot
 
 ### Gestion des Tâches
 
-- **Création de Tâches** : Permet de créer et d’organiser des tâches par catégories, chaque tâche contribuant aux objectifs globaux fixés. En fonction de la réalisation ou de l'absence de réalisation de certaines tâches, un solde positif ou négatif peut être généré pour garder une trace des progrès ou des aspects à améliorer.
-  
-- **Organisation par Objectifs** : Possibilité de structurer les tâches et de les associer à des objectifs spécifiques pour un suivi personnalisé, en créant un manager pour chaque objectif.
+- **Création et Organisation des Tâches** : Permet de créer, organiser et gérer les tâches par catégories et sous-types, chaque tâche contribuant aux objectifs globaux fixés. En fonction de la réalisation ou de l'absence de réalisation de certaines tâches, un solde positif ou négatif est généré pour garder une trace des progrès ou des aspects à améliorer.
+
+- **Tâches Ponctuelles** : Possibilité de créer des tâches ponctuelles qui s’affichent comme les autres tâches, mais s’effacent automatiquement après leur réalisation. Ces tâches permettent d'attribuer un nombre spécifique de points lors de leur création et contribuent ainsi au total des points au moment de leur exécution.
+
+- **Organisation par Objectifs** : Les tâches peuvent être structurées et associées à des objectifs spécifiques. Un manager est créé pour chaque objectif, permettant de suivre et d'évaluer les progrès de manière détaillée.
+
+- **Sous-Managers** : Gestion multi-niveaux des tâches par sous-managers, permettant d'assigner des tâches, récompenses et objectifs spécifiques pour chaque sous-manager, avec un suivi individuel de la progression.
 
 ### Système de Points et Récompenses
 
