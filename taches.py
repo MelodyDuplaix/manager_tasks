@@ -80,13 +80,17 @@ with col_general:
         save_data(data_file, data)
         log_action(log_file, sous_manager_selection, "Récompense", recompense, valeur)
 
-    def ajouter_tache(valeur, nom_tache):
+    def ajouter_tache(valeur, nom_tache, tache_ponctuelle=False):
         st.session_state.total += valeur
         st.session_state.daily += valeur
         sous_manager_data['daily'] = st.session_state.daily
         sous_manager_data['total'] = st.session_state.total
         save_data(data_file, data)
         log_action(log_file, sous_manager_selection, "Tâche", nom_tache, valeur)
+        # Supprimer la tâche ponctuelle après l'exécution
+        if tache_ponctuelle:
+            del sous_manager_data['taches_ponctuelles'][nom_tache]
+            save_data(data_file, data)
 
     st.header("Récompenses")
     for recompense, valeur in sous_manager_data.get('recompenses', {}).items():
@@ -94,6 +98,7 @@ with col_general:
 
     st.header("Tâches")
 
+    # Gestion des tâches récurrentes
     sous_types = {}
     for tache, (valeur, sous_type) in sous_manager_data.get('taches', {}).items():
         if sous_type not in sous_types:
@@ -106,3 +111,19 @@ with col_general:
             st.subheader(sous_type)
             for tache, valeur in taches:
                 st.button(f"{tache} (+{valeur})", on_click=ajouter_tache, args=(valeur, tache))
+
+    # Gestion des tâches ponctuelles
+    st.header("Tâches Ponctuelles")
+
+    # Afficher les tâches ponctuelles existantes
+    for tache, valeur in sous_manager_data.get('taches_ponctuelles', {}).items():
+        st.button(f"{tache} (+{valeur})", on_click=ajouter_tache, args=(valeur, tache, True))
+
+    # Formulaire pour ajouter une nouvelle tâche ponctuelle
+    with st.expander("Ajouter une tâche ponctuelle"):
+        nom_tache_ponctuelle = st.text_input("Nom de la tâche ponctuelle")
+        valeur_tache_ponctuelle = st.number_input("Valeur de la tâche ponctuelle", min_value=0, step=1)
+        if st.button("Ajouter tâche ponctuelle"):
+            sous_manager_data.setdefault('taches_ponctuelles', {})[nom_tache_ponctuelle] = valeur_tache_ponctuelle
+            save_data(data_file, data)
+            st.rerun()

@@ -2,8 +2,8 @@
     "managers": {
         "Beautysané": {
             "objectif": 10,
-            "daily": 0,
-            "total": 12,
+            "daily": 9,
+            "total": 1,
             "objectif_mensuel": 300,
             "objectif_hebdomadaire": 100,
             "taches": {
@@ -39,12 +39,13 @@
             "recompenses": {
                 "jours de repos": 20,
                 "Manger du chocolat": 1
-            }
+            },
+            "taches_ponctuelles": {}
         },
         "Test": {
             "objectif": 15,
             "daily": 0,
-            "total": 7,
+            "total": 2,
             "objectif_mensuel": 200,
             "objectif_hebdomadaire": 70,
             "taches": {
