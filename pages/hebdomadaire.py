@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 # Fichiers de données
 data_file = 'data.json'
-historique_file = 'historique.csv'
+historique_file = './historique.csv'
 
 # Fonction pour charger les données depuis le fichier JSON
 def load_data(filename):
@@ -26,7 +26,7 @@ def calculer_pieces_hebdomadaires(sous_manager):
         df = pd.read_csv(historique_file, header=None, names=["date", "manager", "type", "nom", "valeur"])
         df['date'] = pd.to_datetime(df['date'], format='%d/%m/%y %H:%M:%S')
 
-        debut_semaine = datetime.now() - timedelta(days=datetime.now().weekday())
+        debut_semaine = (datetime.now() - timedelta(days=datetime.now().weekday())).replace(hour=0, minute=0, second=0, microsecond=0)
         df_semaine = df[(df['date'] >= debut_semaine) & (df['manager'] == sous_manager)]
 
         total_taches = df_semaine[df_semaine['type'] == "Tâche"]['valeur'].sum()
