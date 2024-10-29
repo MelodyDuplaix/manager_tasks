@@ -60,7 +60,7 @@ def supprimer_recompense(nom):
 
 # Fonction pour modifier l'objectif
 def modifier_objectif(sous_manager, nouvel_objectif):
-    data['managers'][sous_manager]['objectif_quotidien'] = nouvel_objectif
+    data['managers'][sous_manager]['objectif'] = nouvel_objectif
     save_data(data_file, data)
 
 st.set_page_config(page_title="Modification des tâches et récompenses", page_icon="⚙️", layout="centered")
@@ -71,7 +71,7 @@ sous_manager = st.sidebar.selectbox("Choisissez le sous-manager", options=list(d
 
 # Section pour l'objectif
 st.header(f"Objectif quotidien de {sous_manager}")
-objectif = data["managers"][sous_manager].get('objectif_quotidien', 0)
+objectif = data["managers"][sous_manager].get('objectif', 0)
 nouvel_objectif = st.number_input("Modifier l'objectif", value=objectif, step=1)
 if st.button("Mettre à jour l'objectif"):
     modifier_objectif(sous_manager, nouvel_objectif)
