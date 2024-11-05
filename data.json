@@ -41,6 +41,16 @@
                 "Manger du chocolat": 1
             },
             "taches_ponctuelles": {}
+        },
+        "Taches du jour": {
+            "objectif": 10,
+            "daily": 0,
+            "total": 0,
+            "objectif_mensuel": 300,
+            "objectif_hebdomadaire": 100,
+            "taches": {},
+            "recompenses": {},
+            "taches_ponctuelles": {}
         }
     }
 }

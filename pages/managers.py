@@ -31,7 +31,16 @@ data = load_data(data_file)
 # Fonction pour ajouter un nouveau sous-manager
 def ajouter_sous_manager(nom):
     if nom not in data['managers']:
-        data['managers'][nom] = {"taches": {}, "recompenses": {}, "objectif_quotidien": 0}
+        data['managers'][nom] = {
+            "objectif": 10,
+            "daily": 0,
+            "total": 0,
+            "objectif_mensuel": 300,
+            "objectif_hebdomadaire": 100,
+            "taches": {}, 
+            "recompenses": {},
+            "taches_ponctuelles": {}
+        }
         save_data(data_file, data)
 
 # Fonction pour modifier le nom d'un sous-manager existant
