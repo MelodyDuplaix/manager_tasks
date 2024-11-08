@@ -16,3 +16,13 @@
 .stDateInput[data-testid="stDateInput"] {
 width: fit-content !important;
 }
+
+.label_total {
+    text-align: center;
+}
+#total_historique {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}

@@ -57,3 +57,4 @@ if len(selection) > 0:
 
 st.dataframe(historique_filtre, height=(len(historique_filtre) + 1) * 35 + 3, hide_index=True, use_container_width=False, width=800)
 
+st.markdown("<p class='label_total'>Total de pièces filtrés<br><span id='total_historique'>" + str(len(historique_filtre)) + "<span></p>", unsafe_allow_html=True)
