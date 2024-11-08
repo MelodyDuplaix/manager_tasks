@@ -2,8 +2,8 @@
     "managers": {
         "Beautysané": {
             "objectif": 10,
-            "daily": 6,
-            "total": 25,
+            "daily": 11,
+            "total": -10,
             "objectif_mensuel": 300,
             "objectif_hebdomadaire": 100,
             "taches": {

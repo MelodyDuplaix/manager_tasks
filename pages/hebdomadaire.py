@@ -30,9 +30,7 @@ def calculer_pieces_hebdomadaires(sous_manager):
         df_semaine = df[(df['date'] >= debut_semaine) & (df['manager'] == sous_manager)]
 
         total_taches = df_semaine[df_semaine['type'] == "Tâche"]['valeur'].sum()
-        total_recompenses = df_semaine[df_semaine['type'] == "Récompense"]['valeur'].sum()
-        total_hebdomadaire = total_taches - total_recompenses
-        return total_hebdomadaire
+        return total_taches
 
     return 0
 

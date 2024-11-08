@@ -32,9 +32,7 @@ def calculer_pieces_mensuelles(sous_manager):
                      (df['manager'] == sous_manager)]
 
         total_taches = df_mois[df_mois['type'] == "Tâche"]['valeur'].sum()
-        total_recompenses = df_mois[df_mois['type'] == "Récompense"]['valeur'].sum()
-        total_mensuel = total_taches - total_recompenses
-        return total_mensuel
+        return total_taches
 
     return 0
 
