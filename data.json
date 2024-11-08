@@ -44,11 +44,16 @@
         },
         "Taches du jour": {
             "objectif": 10,
-            "daily": 0,
-            "total": 0,
+            "daily": 4,
+            "total": 20,
             "objectif_mensuel": 300,
             "objectif_hebdomadaire": 100,
-            "taches": {},
+            "taches": {
+                "Test": [
+                    1,
+                    "Test"
+                ]
+            },
             "recompenses": {},
             "taches_ponctuelles": {}
         }
