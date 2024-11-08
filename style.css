@@ -13,3 +13,6 @@
 .stExpander {
     max-width: 599px;
   }
+.stDateInput[data-testid="stDateInput"] {
+width: fit-content !important;
+}
